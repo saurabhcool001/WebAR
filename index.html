@@ -11,16 +11,17 @@
 		  </a-assets>
 
 		  <a-entity mindar-image-target="targetIndex: 0">
-			<a-gltf-model src="#model" scale="0.3 0.3 0.3" position="0 0 0"></a-gltf-model>
+			<a-gltf-model src="#model" scale="0.3 0.3 0.3" position="0 0 0" rotate-model></a-gltf-model>
 		  </a-entity>
 
 		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     </a-scene>
   </body>
-</html>    <script>
+</html>    
+<script>
       AFRAME.registerComponent('rotate-model', {
         tick: function () {
           this.el.object3D.rotation.y += 0.01;
         }
       });
-    </script>
+</script>
