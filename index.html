@@ -1,12 +1,11 @@
 <html>
   <head>
-	  <title>Test WebAAR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets1.mind; filterMinCF: 0.05; filterBeta: 100;" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: targets.mind; filterMinCF: 0.05; filterBeta: 100;" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
 			<a-asset-item id="model" src="model.glb"></a-asset-item>
 		  </a-assets>
@@ -21,7 +20,7 @@
 					  width: 1;
 					  extrudeDepth: 0.05;"
 				position="0 -0.2 0"
-				scale="0.5 0.5 0.5">
+				scale="0.15 0.15 0.15">
 			</a-text>
 		  </a-entity>
 
