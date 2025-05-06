@@ -5,7 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets.mind;" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: targets.mind; filterMinCF: 0.1; filterBeta: 10;" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
 			<a-asset-item id="model" src="model.glb"></a-asset-item>
 		  </a-assets>
@@ -17,4 +17,10 @@
 		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     </a-scene>
   </body>
-</html>
+</html>    <script>
+      AFRAME.registerComponent('rotate-model', {
+        tick: function () {
+          this.el.object3D.rotation.y += 0.01;
+        }
+      });
+    </script>
